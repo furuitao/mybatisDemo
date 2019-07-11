@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>  
+    <classPathEntry location="/Users/finup/Documents/workspace/mybatisDemo/lib/mysql-connector-java-5.1.44.jar" />
+    <context id="sysGenerator" targetRuntime="MyBatis3">  
+  
+        <commentGenerator>  
+            <property name="suppressAllComments" value="true" />  
+        </commentGenerator>  
+  
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"  
+            connectionURL="jdbc:mysql://10.10.231.135:3306/finup_lend"
+            userId="root" password="OYLDASuPfbpsEQB6">
+        </jdbcConnection>  
+  
+        <!-- Model生成到什么位置-->
+        <javaModelGenerator targetPackage="com.puhui.lend.entity"
+            targetProject="./src">
+            <property name="enableSubPackages" value="true" />  
+            <property name="trimStrings" value="true" />  
+        </javaModelGenerator>  
+  
+	<!-- sqlMap*.xml生成的位置-->
+        <sqlMapGenerator targetPackage="com.puhui.lend.mapper"
+            targetProject="./src">
+            <property name="enableSubPackages" value="true" />  
+        </sqlMapGenerator>  
+  
+	<!-- 客户端应用接口生成的位置(DAO Interface)-->
+        <javaClientGenerator type="XMLMAPPER"
+            targetPackage="com.puhui.lend.mapper" targetProject="./src">
+            <property name="enableSubPackages" value="true" />  
+        </javaClientGenerator>  
+  
+        <!-- 想要生成的数据库表,自动化工具会根据该表的结构生成相应的vo对象 -->
+        <!-- 
+        <table schema="" tableName="pro_operlog" />
+		<table schema="" tableName="pro_action" />
+		<table schema="" tableName="pro_dictionarys" />
+		<table schema="" tableName="pro_authority" />
+		<table schema="" tableName="pro_group" />
+		<table schema="" tableName="pro_group_auth" />
+		<table schema="" tableName="pro_menu" />
+		<table schema="" tableName="pro_menu_auth" />
+		<table schema="" tableName="pro_res_auth" />
+		<table schema="" tableName="pro_resource" />
+		<table schema="" tableName="pro_system" />
+		<table schema="" tableName="pro_system_auth" />
+		<table schema="" tableName="pro_user" />
+		<table schema="" tableName="pro_user_auth" />
+		<table schema="" tableName="pro_user_group" />
+		<table schema="" tableName="pro_user_org" />
+
+		<table schema="" tableName="mapp_product_type" />-->
+		
+		
+		<table schema="" tableName="ixinnuo_report" />
+
+		
+    </context>  
+</generatorConfiguration>  
